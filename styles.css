@@ -1,0 +1,945 @@
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    background-color: #00ffff;
+}
+
+header nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header nav .drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+    padding: 10px;
+    color: black;
+}
+
+header nav .drop-down-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav .drop-down-content a:hover {
+    background-color: #f1f1f1;
+}
+
+header nav .dropdown:hover .drop-down-content {
+    display: block;
+}
+
+.hero {
+    height: 80vh;
+    background-image: url(catO.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00ffff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+} */
+
+/* Remaining styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    background-color: #00ffff;
+}
+
+header nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header nav .drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    z-index: 1;
+    padding: 10px;
+    color: black;
+}
+
+header nav .drop-down-content.about-dropdown p {
+    color: black;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+header nav .drop-down-content.contact-dropdown a,
+header nav .drop-down-content.contact-dropdown label {
+    color: black;
+}
+
+header nav .drop-down-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav .drop-down-content a:hover {
+    background-color: #f1f1f1;
+}
+
+header nav .dropdown:hover .drop-down-content {
+    display: block;
+}
+
+.hero {
+    height: 80vh;
+    background-image: url(catO.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00ffff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Remaining styles */
+
+/*  inin  */
+
+
+
+
+.hero {
+    height: 80vh;
+
+    background-image: url(catO.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00ffff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #1b1b1b;
+}
+
+.product-card {
+    background-color: #2a2a2a;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bbbbbb;
+}
+
+.product-card button {
+    background-color: #00ffff;
+    border: none;
+    padding: 10px 20px;
+    color: #121212;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0099cc;
+}
+
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial .author {
+    color: #00ffff;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #1b1b1b;
+}
+
+.product-card {
+    background-color: #2a2a2a;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bbbbbb;
+}
+
+.product-card button {
+    background-color: #00ffff;
+    border: none;
+    padding: 10px 20px;
+    color: #121212;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0099cc;
+}
+
+/* Contact Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: #bbbbbb;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    font-size: 14px;
+}
+
+.contact-form button {
+    background-color: #00ffff;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #0099cc;
+}
+
+
+
+header {
+    background: #1f1f1f;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    background-color: #00ffff;
+}
+
+header nav button {
+    background-color: #00ffff;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+header nav button:hover {
+    background-color: #0099cc;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #1b1b1b;
+}
+
+.product-card {
+    background-color: #2a2a2a;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bbbbbb;
+}
+
+.product-card button {
+    background-color: #00ffff;
+    border: none;
+    padding: 10px 20px;
+    color: #121212;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0099cc;
+}
+
+/* Contact Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: #bbbbbb;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    font-size: 14px;
+}
+
+.contact-form button {
+    background-color: #00ffff;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #0099cc;
+}
+
+/* Chat Section */
+.chat-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-area {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #333;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.user-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+}
+
+.modal-content {
+    background-color: #2a2a2a; /* Match product card background */
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 90%; /* Width of modal */
+    max-width: 400px; /* Max width for larger screens */
+    color: #ffffff; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.close-btn {
+    color: #fff; /* Close button color */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #00ffff; /* Change color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    margin-bottom: 15px; /* Spacing below the heading */
+    color: #00ffff; /* Heading color */
+}
+
+.modal input[type="email"],
+.modal input[type="text"] {
+    margin-bottom: 15px; /* Space between inputs */
+    padding: 10px;
+    border-radius: 5px;
+    border: none; /* No border */
+    background-color: #444444; /* Input background */
+    color: white; /* Text color */
+    font-size: 14px;
+    width: 100%; /* Full width */
+}
+
+.modal button {
+    background-color: #00ffff; /* Button background */
+    color: #121212; /* Button text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #0099cc; /* Button hover color */
+}
+
+
+/* Add the following styles */
+
+/* Water Effect */
+header {
+    background: url('water_background.png') repeat; /* Add your water background image here */
+    animation: waterAnimation 6s linear infinite; /* Animation for the water effect */
+}
+
+@keyframes waterAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100px; }
+}
+
+/* Donation Modal Styles */
+.donation-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+}
+
+.donation-modal .modal-content {
+    background-color: #2a2a2a; /* Match product card background */
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 90%; /* Width of modal */
+    max-width: 400px; /* Max width for larger screens */
+    color: #ffffff; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.donation-modal h2 {
+    margin-bottom: 15px; /* Spacing below the heading */
+    color: #00ffff; /* Heading color */
+}
+
+
+/* Water Effect */
+header {
+    background: url('catO.jpeg') repeat; /* Add your water background image here */
+    animation: waterAnimation 6s linear infinite; /* Animation for the water effect */
+}
+
+@keyframes waterAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100px; }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+}
+
+.modal-content {
+    background-color: #2a2a2a; /* Match product card background */
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 90%; /* Width of modal */
+    max-width: 400px; /* Max width for larger screens */
+    color: #ffffff; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.close-btn {
+    color: #fff; /* Close button color */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #00ffff; /* Change color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    margin-bottom: 15px; /* Spacing below the heading */
+    color: #00ffff; /* Heading color */
+}
+
+.modal input[type="email"],
+.modal input[type="text"] {
+    margin-bottom: 15px; /* Space between inputs */
+    padding: 10px;
+    border-radius: 5px;
+    border: none; /* No border */
+    background-color: #444444; /* Input background */
+    color: white; /* Text color */
+    font-size: 14px;
+    width: 100%; /* Full width */
+}
+
+.modal button {
+    background-color: #00ffff; /* Button background */
+    color: #121212; /* Button text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #0099cc; /* Button hover color */
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 80vh;
+    background-image: url(image1.jpg); /* Default background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00ffff;
+    text-align: center;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #1b1b1b;
+}
+
+.product-card {
+    background-color: #2a2a2a;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bbbbbb;
+}
+
+.product-card button {
+    background-color: #00ffff;
+    border: none;
+    padding: 10px 20px;
+    color: #121212;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0099cc;
+}
+
+/* Contact Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: #bbbbbb;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    font-size: 14px;
+}
+
+.contact-form button {
+    background-color: #00ffff;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #0099cc;
+}
+
+/* Chat Section */
+.chat-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-area {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #333;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.user-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#dos {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+#donate-btn {
+    background-color: #00ffff;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 130px;
+}
+#dos2 {
+margin: 20px 0 10px;
+font-size: 2.5rem;
+color: #00ffff;
+}

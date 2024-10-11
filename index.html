@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FGreen Root Reviver</title>
+</head>
+<body>
+    <header>
+        <label for="" id="dos2">Green Root Reviver</label>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">All Trees</a>
+            <div class="dropdown">
+                <a href="#" class="about">About Us</a>
+                <div class="drop-down-content about-dropdown">
+                    <p>Green Root Reviver Self Help Group is a community-based organization dedicated to environment conservation and promoting sustainable practices within our region and countrywide. Our group has been actively involved in raising awareness about the importance of trees in mitigating climate change, conserving natural resources, carbon credit, and biodiversity.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="contacts">Contact</a>
+                <div class="drop-down-content contact-dropdown">
+                    <label class="gmail">gmail:
+                        <ul>
+                            <li><a href="https://accounts.google.co.ke">greenrootrevivers@gmail.com</a></li>
+                            <li><a href="https://accounts.google.co.ke">greenrootrevivers17@gmail.com</a></li>
+                        </ul>
+                    </label>
+                    <a href="https://wa.me/0112553320?text=Hello%20I%20am%20interested%20in%20your%20service" target="_blank">Chat with us on WhatsApp</a>
+                </div>
+            </div>
+            <button id="signup-btn">Sign Up</button>
+        </nav>
+    </header>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+                <button type="submit">Send Verification Code</button>
+            </form>
+            <div id="verification-section" style="display: none;">
+                <label for="verification-code">Enter Verification Code:</label>
+                <input type="text" id="verification-code" required>
+                <button id="verify-btn">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero" id="hero-section">
+        <div>
+            <h1>Explore the Future</h1>
+            <p>Modern products, designed for tomorrow.</p>
+        </div>
+    </section>
+
+    
+    <section class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x300" alt="Product 1">
+            <h3>Bamboo Trees Project</h3>
+            <p>Experience next-gen technology in the palm of your hand.</p>
+            <button>Ongoing</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x300" alt="Product 2">
+            <h3>Harsh Avocado Project</h3>
+            <p>See the world in augmented reality with style.</p>
+            <button>Ongoing</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x300" alt="Product 3">
+            <h3>Grafted Mangoes</h3>
+            <p>Immersive sound with no strings attached.</p>
+            <button>Ongoing</button>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="product-card contact-form">
+            <h3>Get In Touch</h3>
+            <form action="mailto:greenrootrevivers@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="product-card chat-section">
+            <h3>Join the Chat</h3>
+            <button id="join-chat-btn" disabled>Join Chat</button>
+            <div id="chat-area" style="display: none;">
+                <div id="messages"></div>
+                <input type="text" id="chat-input" placeholder="Type your message here..." />
+                <button id="send-chat-btn">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h3 id="dos">Support greenrootrevivers by donating something</h3>
+
+        <button id="donate-btn">Donate</button>
+    </section>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Donation Information</h2>
+            <p>Paybill: 2323 234 2323 232</p>
+            <p>Account No: 232 232 23</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CipherRax github Products. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const signupBtn = document.getElementById('signup-btn');
+        const signupModal = document.getElementById('signup-modal');
+        const donationModal = document.getElementById('donation-modal');
+        const closeBtns = document.querySelectorAll('.close-btn');
+        const signupForm = document.getElementById('signup-form');
+        const verificationSection = document.getElementById('verification-section');
+        const verifyBtn = document.getElementById('verify-btn');
+        const joinChatBtn = document.getElementById('join-chat-btn');
+        const chatArea = document.getElementById('chat-area');
+        const messages = document.getElementById('messages');
+        const chatInput = document.getElementById('chat-input');
+        const sendChatBtn = document.getElementById('send-chat-btn');
+
+        // Open the sign-up modal
+        signupBtn.onclick = function() {
+            signupModal.style.display = 'block';
+        };
+
+        // Close modals
+        closeBtns.forEach(btn => {
+            btn.onclick = function() {
+                btn.closest('.modal').style.display = 'none';
+            };
+        });
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target === signupModal || event.target === donationModal) {
+                event.target.style.display = 'none';
+            }
+        };
+
+        // Handle sign-up form submission
+        signupForm.onsubmit = function(event) {
+            event.preventDefault();
+            verificationSection.style.display = 'block';
+            // Normally, you'd send the email and get a verification code here.
+        };
+
+        // Handle verification code
+        verifyBtn.onclick = function() {
+            alert("Email verified! You can now join the chat.");
+            joinChatBtn.disabled = false; // Enable the join chat button
+            signupModal.style.display = 'none'; // Close the modal
+        };
+
+        // Handle chat functionality
+        joinChatBtn.onclick = function() {
+            chatArea.style.display = 'block';
+        };
+
+        sendChatBtn.onclick = function() {
+            const message = chatInput.value;
+            if (message.trim()) {
+                const userEmail = document.getElementById('signup-email').value; // Get user email for display
+                messages.innerHTML += `<div class="message"><img src="https://via.placeholder.com/40" alt="User" class="user-pic"><strong>${userEmail}:</strong> ${message}</div>`;
+                chatInput.value = ''; // Clear input field
+            }
+        };
+
+        // Background image rotation in the hero section
+        const heroSection = document.getElementById('hero-section');
+        const images = [
+            'url(image1.jpg)', // Replace with your actual image URLs
+            'url(image2.jpg)',
+            'url(image3.jpg)'
+        ];
+        let currentImageIndex = 0;
+
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            heroSection.style.backgroundImage = images[currentImageIndex];
+        }, 3000);
+
+        // Donation button functionality
+        const donateBtn = document.getElementById('donate-btn');
+        donateBtn.onclick = function() {
+            donationModal.style.display = 'block';
+        };
+    </script>
+</body>
+</html>
