@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Background image rotation setup
     const images = ['hump3.jpeg', 'hump2.jpeg', 'hump1.jpeg', 'hump4.jpeg', 'hump5.jpeg', 'hump9.jpeg', 'hump7.jpeg', 'hump10.jpeg', 'hump13.jpeg', 'hump3.jpeg'];
+    const preloadedImages = images.map((src) => {
+        const img = new Image();
+        img.src = src;
+        return img;
+    });
     let currentImageIndex = 0;
 
     function changeBackgroundImage() {
