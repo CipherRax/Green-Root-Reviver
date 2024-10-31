@@ -54,19 +54,26 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const email = document.getElementById('signup-email').value;
         code = Math.floor(100000 + Math.random() * 900000); // Generate 6-digit code
-
+    
         try {
-            await fetch('/send-verification-code', {
+            const response = await fetch('http://localhost:3000/send-verification-code', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, code })
             });
-            alert(`Verification code sent to ${email}`);
-            verificationSection.style.display = 'block';
+    
+            if (response.ok) {
+                alert(`Verification code sent to ${email}`);
+                verificationSection.style.display = 'block';
+            } else {
+                alert('Error sending email');
+            }
         } catch (error) {
-            alert('Error sending email');
+            console.error(error);
+            alert('Error connecting to server');
         }
     };
+    
 
     // Verify the code entered by the user
     verifyBtn.onclick = function() {
