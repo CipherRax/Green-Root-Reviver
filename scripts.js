@@ -16,14 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Background image rotation setup
     const images = ['hump1.jpeg', 'hump2.jpeg', 'hump3.jpeg'];
     let currentImageIndex = 0;
-    
+
     function changeBackgroundImage() {
-        heroSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
-        currentImageIndex = (currentImageIndex + 1) % images.length;
+        if (heroSection) { // Check if heroSection exists
+            heroSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
     }
-    
+
     setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
-    
+
     // Open the signup modal
     signupBtn.onclick = function() {
         signupModal.style.display = 'block';
@@ -88,10 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Background image rotation for the hero section
-    function changeBackgroundImage() {
-        heroSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-    }
-    setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
+    // Initial background image set-up
+    changeBackgroundImage();
 });
