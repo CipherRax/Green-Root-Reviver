@@ -98,27 +98,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial background image set-up
     changeBackgroundImage();
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const donateBtn = document.getElementById('donate-btn');
-        const donationModal = document.getElementById('donation-modal');
-        const closeBtn = donationModal.querySelector('.close-btn');
+
     
-        // Open the donation modal on "Donate" button click
-        donateBtn.onclick = function() {
-            donationModal.style.display = 'flex';
-        };
-    
-        // Close the modal when the close button is clicked
-        closeBtn.onclick = function() {
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const donateBtn = document.getElementById('donate-btn');
+    const donationModal = document.getElementById('donation-modal');
+    const closeBtn = donationModal.querySelector('.close-btn');
+
+    // Open the donation modal on "Donate" button click
+    donateBtn.onclick = function() {
+        donationModal.style.display = 'flex';
+    };
+
+    // Close the modal when the close button is clicked
+    closeBtn.onclick = function() {
+        donationModal.style.display = 'none';
+    };
+
+    // Close the modal when clicking outside the modal content
+    window.onclick = function(event) {
+        if (event.target === donationModal) {
             donationModal.style.display = 'none';
-        };
-    
-        // Close the modal when clicking outside the modal content
-        window.onclick = function(event) {
-            if (event.target === donationModal) {
-                donationModal.style.display = 'none';
-            }
-        };
-    });
-    
+        }
+    };
 });
