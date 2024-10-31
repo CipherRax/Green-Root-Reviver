@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSection = document.getElementById('hero-section');
 
     // Background image rotation setup
-    const images = ['hump1.jpeg', 'hump2.jpeg', 'hump3.jpeg', 'hump4.jpeg', 'hump5.jpeg', 'hump9.jpeg', 'hump7.jpeg', 'hump10.jpeg', 'hump13.jpeg', 'hump14.jpeg'];
+    const images = ['hump3.jpeg', 'hump2.jpeg', 'hump1.jpeg', 'hump4.jpeg', 'hump5.jpeg', 'hump9.jpeg', 'hump7.jpeg', 'hump10.jpeg', 'hump13.jpeg', 'hump3.jpeg'];
     let currentImageIndex = 0;
 
     function changeBackgroundImage() {
