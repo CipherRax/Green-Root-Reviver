@@ -34,7 +34,7 @@ verifyBtn.onclick = async function() {
 
 
 // Hero section background image rotation
-    
+
 
 
 
@@ -99,3 +99,17 @@ sendChatBtn.onclick = function() {
     }
 };
 
+
+const images = [
+    'url("hump1.jpeg")',
+    'url("hump2.jpeg")',
+    'url("hump3.jpeg")'
+];
+const heroSection = document.getElementById('hero-section');
+let currentImageIndex = 0;
+
+function changeBackgroundImage() {
+    heroSection.style.backgroundImage = images[currentImageIndex];
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+setInterval(changeBackgroundImage, 3000);
