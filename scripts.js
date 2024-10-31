@@ -35,10 +35,18 @@ verifyBtn.onclick = async function() {
 
 // Hero section background image rotation
 const images = [
-    'url("image1.jpg")',
-    'url("image2.jpg")',
-    'url("image3.jpg")'
+    'url(hump1.jpeg)', // Replace with your actual image URLs
+    'url(hump1jpeg)',
+    'url(hump12pg)',
+    'url(hump2jpeg)',
+    'url(hump3jpeg)',
+    'url(hump4jpeg)',
+    'url(hump5jpeg)',
+    'url(hump6jpeg)',
+    'url(hump7jpeg)',
+    'url(hump14.jpeg)'
 ];
+
 const heroSection = document.getElementById('hero-section');
 let currentImageIndex = 0;
 
