@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Modal and signup form handling
+    // Variable declarations at the top
     const signupBtn = document.getElementById('signup-btn');
     const signupModal = document.getElementById('signup-modal');
     const closeBtns = document.querySelectorAll('.close-btn');
@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const messages = document.getElementById('messages');
     const chatInput = document.getElementById('chat-input');
     const sendChatBtn = document.getElementById('send-chat-btn');
+    const heroSection = document.getElementById('hero-section');
 
     // Background image rotation setup
-    const heroSection = document.getElementById('hero-section');
     const images = ['hump1.jpeg', 'hump2.jpeg', 'hump3.jpeg'];
     let currentImageIndex = 0;
     let code;  // Verification code variable
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.closest('.modal').style.display = 'none';
         };
     });
+
     window.onclick = function(event) {
         if (event.target === signupModal) {
             signupModal.style.display = 'none';
