@@ -54,11 +54,12 @@
     <section class="hero" id="hero-section">
 
         <!-- the main page -->
-        <div class="image-container">
-
-            <img id="slideshow" src="hump10.jpeg" alt="Slideshow Image">
-
-        </div>
+        <section class="hero" id="hero-section">
+            <div class="hero-content">
+                <h2>Promoting Sustainable Agriculture</h2>
+                <p>Empowering communities through environmental conservation</p>
+            </div>
+        </section>
 
     </section>
 
@@ -198,34 +199,6 @@
                 chatInput.value = ''; // Clear input field
             }
         };
-
-        // Background image rotation in the hero section
-        const heroSection = document.getElementById('hero-section');
-        const images = [
-            'url(hump1.jpeg)', // Replace with your actual image URLs
-            'url(hump1.jpeg)',
-            'url(hump2.jpeg)',
-            'url(hump3.jpeg)',
-            'url(hump4.jpeg)',
-            'url(hump5.jpeg)',
-            'url(hump6.jpeg)',
-            'url(hump7.jpeg)',
-            'url(hump14.jpeg)'
-        ];
-        let currentImageIndex = 0;
-
-        setInterval(() => {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            heroSection.style.backgroundImage = images[currentImageIndex];
-        }, 3000);
-
-        // Donation button functionality
-        const donateBtn = document.getElementById('donate-btn');
-        donateBtn.onclick = function() {
-            donationModal.style.display = 'block';
-        };
-
-
         
     </script>
     <script src="scripts.js"></script>

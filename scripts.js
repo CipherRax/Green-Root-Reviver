@@ -34,27 +34,32 @@ verifyBtn.onclick = async function() {
 
 
 // Hero section background image rotation
+// Array of background images
 const images = [
-    'url(hump1.jpeg)', // Replace with your actual image URLs
-    'url(hump1jpeg)',
-    'url(hump12pg)',
-    'url(hump2jpeg)',
-    'url(hump3jpeg)',
-    'url(hump4jpeg)',
-    'url(hump5jpeg)',
-    'url(hump6jpeg)',
-    'url(hump7jpeg)',
-    'url(hump14.jpeg)'
+    'url("image1.jpg")',
+    'url("image2.jpg")',
+    'url("image3.jpg")'
 ];
 
+// Select the hero section element
 const heroSection = document.getElementById('hero-section');
+
+// Initialize the current image index
 let currentImageIndex = 0;
 
+// Function to change the background image
 function changeBackgroundImage() {
+    // Update the background image
     heroSection.style.backgroundImage = images[currentImageIndex];
+
+    // Move to the next image, looping back to the start if at the end
     currentImageIndex = (currentImageIndex + 1) % images.length;
 }
-setInterval(changeBackgroundImage, 3000);
+
+// Start the image rotation every 3 seconds
+setInterval(changeBackgroundImage, 3000); // 3000 ms = 3 seconds
+
+
 
 // Modal and sign-up form handling
 const signupBtn = document.getElementById('signup-btn');
