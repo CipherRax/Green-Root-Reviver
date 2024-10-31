@@ -104,13 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Selecting the donate button and modal elements
     const donateBtn = document.getElementById('donate-btn');
     const donationModal = document.getElementById('donation-modal');
     const closeBtn = donationModal.querySelector('.close-btn');
 
     // Open the donation modal on "Donate" button click
     donateBtn.onclick = function() {
-        donationModal.style.display = 'flex';
+        donationModal.style.display = 'flex'; // Display the modal
     };
 
     // Close the modal when the close button is clicked
