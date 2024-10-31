@@ -206,7 +206,7 @@ header nav .dropdown:hover .drop-down-content {
 .hero {
     height: 80vh;
 
-    background-image: url(hump13.jpeg);
+    background-image: url(hump.jpeg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -682,7 +682,7 @@ header nav button:hover {
 
 /* Water Effect */
 header {
-    background: url('water_background.png') repeat; /* Add your water background image here */
+    background: url('hump13.jpeg') repeat; /* Add your water background image here */
     animation: waterAnimation 6s linear infinite; /* Animation for the water effect */
 }
 
@@ -723,7 +723,7 @@ header {
 
 /* Water Effect */
 header {
-    background: url('catO.jpeg') repeat; /* Add your water background image here */
+    background: url('hump13.jpeg') repeat; /* Add your water background image here */
     animation: waterAnimation 6s linear infinite; /* Animation for the water effect */
 }
 
@@ -803,9 +803,9 @@ header {
 }
 
 /* Hero Section Styles */
-.hero {
+/* .hero {
     height: 80vh;
-    background-image: url(image1.jpg); /* Default background */
+    background-image: url(image1.jpg); /
     background-size: cover;
     background-position: center;
     display: flex;
@@ -813,7 +813,7 @@ header {
     align-items: center;
     color: #00ffff;
     text-align: center;
-}
+} */
 
 /* Products Section */
 .products {
