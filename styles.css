@@ -76,6 +76,43 @@ header nav .dropdown:hover .drop-down-content {
     display: block;
 }
 
+/* Dropdown menu styling */
+header nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header nav .drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a; /* Dark background matching product card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    min-width: 200px;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 0;
+    z-index: 1;
+}
+
+header nav .drop-down-content a,
+header nav .drop-down-content label {
+    color: #ffffff; /* Text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+header nav .drop-down-content a:hover {
+    background-color: #00ffff; /* Highlight on hover to match theme */
+    color: #121212; /* Dark text on hover */
+    border-radius: 5px; /* Slight rounding on hover */
+}
+
+header nav .dropdown:hover .drop-down-content {
+    display: block; /* Show dropdown on hover */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
 
 .hero {
     height: 80vh;
