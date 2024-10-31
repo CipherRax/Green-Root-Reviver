@@ -202,29 +202,27 @@ header nav .dropdown:hover .drop-down-content {
 
 
 
-
 .hero {
     height: 80vh;
-
-    background-image: url(hump.jpeg);
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #00ffff;
     text-align: center;
+    transition: background-image 1s ease-in-out; /* Smooth transition */
 }
 
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
+.hero-content h2 {
+    font-size: 3rem;
+    color: #00ffff;
 }
 
-.hero p {
+.hero-content p {
     font-size: 1.5rem;
-    margin-top: 10px;
+    color: #ffffff;
 }
+
 
 .products {
     display: flex;

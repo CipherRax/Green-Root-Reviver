@@ -100,16 +100,27 @@ sendChatBtn.onclick = function() {
 };
 
 
+// Array of background images
 const images = [
     'url("hump1.jpeg")',
     'url("hump2.jpeg")',
     'url("hump3.jpeg")'
 ];
+
+// Select the hero section element
 const heroSection = document.getElementById('hero-section');
+
+// Initialize the current image index
 let currentImageIndex = 0;
 
+// Function to change the background image
 function changeBackgroundImage() {
+    // Update the background image
     heroSection.style.backgroundImage = images[currentImageIndex];
+
+    // Move to the next image, looping back to the start if at the end
     currentImageIndex = (currentImageIndex + 1) % images.length;
 }
-setInterval(changeBackgroundImage, 3000);
+
+// Start the image rotation every 3 seconds
+setInterval(changeBackgroundImage, 3000); // 3000 ms = 3 seconds
