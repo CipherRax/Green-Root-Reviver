@@ -1,91 +1,3 @@
-/* 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-header {
-    background: #1f1f1f;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: inline-block;
-    font-size: 16px;
-}
-
-header nav a:hover {
-    background-color: #00ffff;
-}
-
-header nav .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-header nav .drop-down-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    min-width: 160px;
-    z-index: 1;
-    padding: 10px;
-    color: black;
-}
-
-header nav .drop-down-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-header nav .drop-down-content a:hover {
-    background-color: #f1f1f1;
-}
-
-header nav .dropdown:hover .drop-down-content {
-    display: block;
-}
-
-.hero {
-    height: 80vh;
-    background-image: url(catO.jpeg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #00ffff;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-} */
-
-/* Remaining styles */
 
 * {
     margin: 0;
@@ -167,13 +79,13 @@ header nav .dropdown:hover .drop-down-content {
 
 .hero {
     height: 80vh;
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: background-image 1s ease-in-out; /* Smooth transition */
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content h2 {
@@ -186,14 +98,10 @@ header nav .dropdown:hover .drop-down-content {
     color: #ffffff;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
 }
 
 /* Remaining styles */
@@ -202,26 +110,6 @@ header nav .dropdown:hover .drop-down-content {
 
 
 
-.hero {
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: background-image 1s ease-in-out; /* Smooth transition */
-}
-
-.hero-content h2 {
-    font-size: 3rem;
-    color: #00ffff;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    color: #ffffff;
-}
 
 
 .products {

@@ -99,6 +99,7 @@ sendChatBtn.onclick = function() {
     }
 };
 
+// change background pic
 
 document.addEventListener('DOMContentLoaded', () => {
     // Array of background images with direct paths
@@ -132,3 +133,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call changeBackgroundImage every 3 seconds
     setInterval(changeBackgroundImage, 3000);
 });
+
