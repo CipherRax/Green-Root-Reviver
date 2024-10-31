@@ -100,27 +100,35 @@ sendChatBtn.onclick = function() {
 };
 
 
-// Array of background images
-const images = [
-    'url("hump1.jpeg")',
-    'url("hump2.jpeg")',
-    'url("hump3.jpeg")'
-];
+document.addEventListener('DOMContentLoaded', () => {
+    // Array of background images with direct paths
+    const images = [
+        'hump1.jpeg',
+        'hump2.jpeg',
+        'hump3.jpeg'
+    ];
 
-// Select the hero section element
-const heroSection = document.getElementById('hero-section');
+    // Get the hero section element
+    const heroSection = document.getElementById('hero-section');
 
-// Initialize the current image index
-let currentImageIndex = 0;
+    // Check if the element is found
+    if (!heroSection) {
+        console.error("Element with ID 'hero-section' not found");
+        return; // Stop the script if element is not found
+    }
 
-// Function to change the background image
-function changeBackgroundImage() {
-    // Update the background image
-    heroSection.style.backgroundImage = images[currentImageIndex];
+    // Initialize index for current image
+    let currentImageIndex = 0;
 
-    // Move to the next image, looping back to the start if at the end
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-}
+    // Function to change the background image
+    function changeBackgroundImage() {
+        // Set the background image with URL formatting for CSS
+        heroSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
 
-// Start the image rotation every 3 seconds
-setInterval(changeBackgroundImage, 3000); // 3000 ms = 3 seconds
+        // Increment index and reset if end of array is reached
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    // Call changeBackgroundImage every 3 seconds
+    setInterval(changeBackgroundImage, 3000);
+});
