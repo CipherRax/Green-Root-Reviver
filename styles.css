@@ -869,5 +869,5 @@ color: #00ffff;
     transition: background-image 1s ease-in-out;
     background-size: cover;
     background-position: center;
-    background-image: url('hump1.jpeg'); /* Fallback image */
+    /* background-image: url('hump1.jpeg'); Fallback image */
 }
