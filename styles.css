@@ -862,12 +862,12 @@ color: #00ffff;
 
 .hero {
     height: 80vh;
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #00ffff;
     text-align: center;
-    transition: background-image 1s ease-in-out; /* Smooth transition */
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-image: url('hump1.jpeg'); /* Fallback image */
 }
