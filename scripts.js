@@ -34,30 +34,7 @@ verifyBtn.onclick = async function() {
 
 
 // Hero section background image rotation
-// Array of background images
-const images = [
-    'url("image1.jpg")',
-    'url("image2.jpg")',
-    'url("image3.jpg")'
-];
-
-// Select the hero section element
-const heroSection = document.getElementById('hero-section');
-
-// Initialize the current image index
-let currentImageIndex = 0;
-
-// Function to change the background image
-function changeBackgroundImage() {
-    // Update the background image
-    heroSection.style.backgroundImage = images[currentImageIndex];
-
-    // Move to the next image, looping back to the start if at the end
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-
-// Start the image rotation every 3 seconds
-setInterval(changeBackgroundImage, 3000); // 3000 ms = 3 seconds
+    
 
 
 
